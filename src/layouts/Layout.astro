@@ -1,0 +1,122 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar">
+				<button class="NavButton" id="toggleBlock1"><a href="/">Home</a></button>
+				<svg class="NavSvg">
+					<path 
+					d="M 0 10 L 0 25"
+					stroke="black" stroke-width="1" fill="black"/>
+				</svg>
+					<button class="NavButton width" id="toggleBlock2"><a href="/aboutme">About me</a></button>
+				<svg class="NavSvg">
+					<path 
+					d="M 0 10 L 0 25"
+					stroke="black" stroke-width="1" fill="black"/>
+				</svg>
+				<button class="NavButton" id="toggleBlock3"><a href="/projects">Projects</a></button>
+				<svg class="NavSvg">
+					<path 
+					d="M 0 10 L 0 25"
+					stroke="black" stroke-width="1" fill="black"/>
+				</svg>
+				<button class="NavButton" id="toggleBlock4"><a href="/Contact">Contact</a></button>
+			</nav>
+				
+				<slot />
+		
+		
+		</div>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html, body {
+		font-family: system-ui, sans-serif;
+		background: #000;
+		background-size: 224px;
+		height: 920px;
+		overflow: hidden;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	html, body{
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		background: #f1f2dc;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.container{
+		border-radius: 25px;
+		background: #faf9f6;
+		width: 97%;
+		height: 95%;
+	}
+	.navbar{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 400px;
+		position: absolute;
+		top: 6%;
+		right: 6%;
+	}
+	.NavButton{
+		border: 0;
+		background: none;
+	}
+	.NavButton:hover{
+		cursor: pointer;
+		background: #f1f2dc;
+	}
+	.NavSvg{
+		height:25px;
+		width:10px;
+	}
+	a {
+		text-decoration: none;
+		color: black;
+	}
+</style>

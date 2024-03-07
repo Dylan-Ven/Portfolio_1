@@ -1,0 +1,51 @@
+---
+
+---
+
+<main>
+    <div class="Home">
+        <svg class="main_svg">
+            <path 
+            d="M 50 50 L 50 266"
+            stroke="black" stroke-width="1" fill="black"/>
+            <path 
+            d="M 50 100 L 350 100"
+            stroke="black" stroke-width="1" fill="black"/>
+        </svg>
+    <h1 class="Name">Dylan van der Ven</h1>
+    </div>
+
+    <button class="hidden bottom" id="button">Show Breaking bad quote</button>
+</main>
+
+<script>
+    function ShowQuote() {
+        fetch('https://api.breakingbadquotes.xyz/v1/quotes')
+        .then(response => response.json())
+        .then((data) => { 
+            let quote = data[0].quote;
+            let author = data[0].author;
+            alert(quote + " - " + author);
+        });    
+    }
+
+    let btn = document.getElementById('button')
+    document.addEventListener('click', ShowQuote)
+</script>
+<style>
+.Name{
+    position: absolute;
+    top: 6%;
+    left: 4.5%;
+    }
+.hidden{
+    border:0;
+    background: #F9F6FA;
+    color: #d9d9d9;
+    }
+.bottom{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+        }
+</style>
