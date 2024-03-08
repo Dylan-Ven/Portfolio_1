@@ -28,9 +28,11 @@
             alert(quote + " - " + author);
         });    
     }
+    let btn = document.getElementById('button');
+    btn.addEventListener('click', ShowQuote);
+    
 
-    let btn = document.getElementById('button')
-    document.addEventListener('click', ShowQuote)
+    
 </script>
 <style>
 .Name{
@@ -42,6 +44,10 @@
     border:0;
     background: #F9F6FA;
     color: #d9d9d9;
+    }
+.hidden:hover{
+    color: #929292;
+    border-bottom: 1px solid #929292;
     }
 .bottom{
     position: absolute;
