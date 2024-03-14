@@ -15,21 +15,33 @@
         <h1 class="Name">Contact Me</h1>
         </div>
 
-
-
-        <div class="content">
-            <div class="contactpoint">
-                <p>Instagram</p>
-                <p>Github</p>
-                <p>Linkedin</p>
-            </div>
-            <svg class="divider">
-                <path 
-                d="M 0 0 L 0 820"
-                stroke="black" stroke-width="1" fill="black"/>
-            </svg>
-            <div class="mailer"></div>
-        </div>
+        <a href="https://github.com/Dylan-Ven">
+            <article class="H100 W500 ArtGrid Art1">
+                <p class="absolute LeftSmall smaller">GitHub Profile</p>
+                <div id="Text1">
+                    <h3 class="Head">Dylan-Ven</h3>
+                    <p>View Dylan-Ven's profile now!</p>
+                </div>
+                <img class="size" id="IMG" src="https://avatars.githubusercontent.com/u/115562417?v=4" alt="photo">
+                </article>
+        </a>
+        <a href="https://www.linkedin.com/in/dylan-van-der-ven-766a94240/">
+            <article class="H100 W500 ArtGrid Art2">
+                
+                <div id="Text1">
+                    <p class="absolute card2 smaller">LinkedIn Profile</p>
+                    <h3 class="Head">Dylan van der Ven</h3>
+                    <p>View Dylan's profile now!</p>
+                </div>
+                <img class="size" id="IMG" src="https://media.licdn.com/dms/image/D4E03AQEqwycHRAI75A/profile-displayphoto-shrink_200_200/0/1685693979606?e=1715817600&v=beta&t=Rq2RyGC-vTLaZXuSjQdeFUEDkGvXNR8z0BgBgfjCHCM" alt="photo">
+                </article>
+        </a>    
+        <svg class="divider">
+            <path 
+            d="M 0 0 L 0 820"
+            stroke="black" stroke-width="1" fill="black"/>
+        </svg>
+        <div class="mailer"></div>
 </main>
 
 <style>
@@ -38,27 +50,79 @@
     top: 6%;
     left: 4.5%;
     }
-    .content{
-        position: absolute;
-        left:5%;
-        top:5%;
-        display: flex;
-        align-items: center;
-        width: 90%;
-        height: 90%;
+   
+    .contactpoint{
+        height: 650px;
     }
     .divider{
         position: absolute;
         left: 50%;
         top: 5%;
         width:1px;
-
-    }
-    .divider {
         height: 872px;
     }
-    .contactpoint{
-        
-    
+    .H100{
+        height: 100px;
     }
+    .W500{
+        width: 500px;
+    }
+    .ArtGrid{
+        transition: background 0.5s ease;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "Text Text Img";
+        background: #F7F6F3;
+        border-left: 3px solid black;
+        border-radius: 5px;
+        padding-left:20px;
+    }
+    .ArtGrid:hover{
+        transition: background 0.5s ease;
+        background: #dfdedd
+    }
+    .size{
+        width: 85px;
+        height: 85px;
+        border-radius: 5%;
+    }
+
+    .Head{
+        width: 200px;
+    }
+    #IMG{
+        grid-area: Img;
+        justify-self: center;
+        align-self: center;
+        width: 85px;
+        height: 85px;
+    }
+    #Text1{
+        grid-area: Text;
+    }
+    .toBackground{
+        z-index: 0;
+    }
+    .Art1{
+        position: absolute;
+        top: 40%;
+        left: 15%;
+    }
+    .Art2{
+        position: absolute;
+        top: 60%;
+        left: 15%;
+    }
+    .absolute{
+        position: absolute;
+    }
+    .LeftSmall{
+        left: 4%;
+    }
+    .smaller{
+        font-size: 10px;
+    }
+
 </style>

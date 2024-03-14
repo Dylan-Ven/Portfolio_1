@@ -3,25 +3,69 @@
 ---
 
 <main>
-<h1>Education</h1>
-<ul>
-    <li>
-        <p>2022 - 2026, ROC Kasteeldreef > Webtechnology</p>
-    </li>
-</ul>
-<h1>
-    Work experience
-</h1>
-<ul>
-    <li>
-        <p>15/07/2023 - 27/08/2023, Tirage Art > Allround Employee</p>
-    </li>
-    <li>
-        <p>11/09/2023 - Now, Albert Heijn > Stock clerk</p>
-    </li>
-</ul>
+<div class="container">
+    <svg class="Path1">
+        <path id="path1"
+            d="M 50 50 L 50 100"
+            stroke="black" stroke-width="1" fill="black"/>
+            <path 
+            d="M 50 100 L 350 100"
+            stroke="black" stroke-width="1" fill="black"/>
+        </svg>
+        <img class="img" src="" alt="">
+        <h1 class="Name">About me</h1>
+    <div class="part_one">
+            <h1>Education</h1>
+        <ul>
+            <li>
+                <p>2022 - 2026, ROC Kasteeldreef > Webtechnology</p>
+            </li>
+        </ul>
+    </div>
+    <div class="part_two">
+        <h1>
+            Work experience
+        </h1>
+        <ul>
+            <li>
+                <p>15/07/2023 - 27/08/2023, Tirage Art > Allround Employee</p>
+            </li>
+            <li>
+                <p>11/09/2023 - Now, Albert Heijn > Stock clerk</p>
+            </li>
+        </ul>
+    </div>    
+</div>
 </main>
 
 <style>
-
+    @keyframes path1{
+        0% {
+            d: path("M 50 50 L 50 650");
+        }
+        100% {
+            d: path("M 50 50 L 50 100")
+        }
+    }
+    #path1{
+        animation: path1 2s;
+    }
+    .Path1{
+        height: 457px;
+    }
+    .Name{
+    position: absolute;
+    top: 6%;
+    left: 4.5%;
+    }
+    .part_one {
+    position:absolute;
+    top: 20%;
+    left: 35%;
+    }
+    .part_two{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    }
 </style>
