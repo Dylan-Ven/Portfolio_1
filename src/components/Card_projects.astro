@@ -1,24 +1,138 @@
 ---
 
 ---
+<script lang="ts">
+    //function to toggle visibility
+    function toggleVisibility(ID){
+        const shownElements = document.querySelector('.shown');
+        const element = document.getElementById(ID);
+
+        if(element.classList.contains('hidden')){
+            element.classList.remove('hidden');
+            element.classList.add('shown');
+        }else if(document.getElementsByClassName('shown')){
+            element.classList.remove('shown');
+            element.classList.add('hidden');
+        }
+
+         if(shownElements){
+            shownElements.classList.remove('shown');
+            shownElements.classList.add('hidden');
+        }
+    }
+    
+</script>
+
 <main>
-    <div class="projects">
-        <svg class="main_svg">
-            <path 
-            d="M 50 50 L 50 100"
-            stroke="black" stroke-width="1" fill="black"/>
-            <path 
-            d="M 50 100 L 350 100"
-            stroke="black" stroke-width="1" fill="black"/>
-        </svg>
-        <h1 class="Name">Projects</h1>
+    <h1 class="Name w250">Projects</h1>
+
+    <div class="info hidden" id="P1">
+        <h3></h3>
+        <a href=""><button>show code</button></a>
+        <p></p>
+    </div>
+        <div class="info hidden" id="P2">
+        <h3></h3>
+        <a href=""><button>show code</button></a>
+        <p></p>
+    </div>
+        <div class="info hidden" id="P3">
+            <h3></h3>
+            <a href=""><button>show code</button></a>
+            <p></p>
+    </div>
+        <div class="info hidden" id="P4">
+            <h3></h3>
+            <a href=""><button>show code</button></a>
+            <p></p>
+    </div>
+        <div class="info hidden" id="P5">
+            <h3></h3>
+            <a href=""><button>show code</button></a>
+            <p></p>
+    </div>
+        <div class="info hidden" id="P6">
+            <h3></h3>
+            <a href=""><button>show code</button></a>
+            <p></p>
+    </div>
+
+
+    <div class="selector">
+        <!-- <button onclick="toggleVisibility('P1')" class="Bbottom">
+            <p>Projectname</p>
+        </button>
+        <button onclick="toggleVisibility('P2')" class="Bbottom">
+            <p>Projectname</p>
+        </button>
+        <button onclick="toggleVisibility('P3')" class="Bbottom">
+            <p>Projectname</p>
+        </button>
+        <button onclick="toggleVisibility('P4')" class="Bbottom">
+            <p>Projectname</p>
+        </button>
+        <button onclick="toggleVisibility('P5')" class="Bbottom">
+            <p>Projectname</p>
+        </button>
+        <button onclick="toggleVisibility('P6')" class="Bbottom">
+            <p>Projectname</p>
+        </button> -->
+        <p>no projects to show.</p>
     </div>
 </main>
 
 <style>
+    .hidden{
+        display: none;
+    }
+
+    .shown{
+        display: block;
+    }
+
     .Name{
     position: absolute;
     top: 6%;
     left: 4.5%;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-left: 5px;
+    }
+
+    .selector{
+        width: 150px;
+        height: 415px;
+    position: absolute;
+    right: 5%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top:25%;
+    overflow: hidden;
+    }
+
+    button, a{
+    margin: 0.5em;
+    padding: 0.5em;
+    border: none;
+    background: none;
+    }
+
+    .info{
+        height:83%;
+        width: 82%;
+        position: absolute;
+        top: 14%;
+        left: 3%;
+        border: 1px solid grey;
+        border-radius: 25px;
+    }
+
+    .w250{
+        width: 250px;
+    }
+
+    .Bbottom{
+        border-bottom: 1px solid grey;
     }
 </style>

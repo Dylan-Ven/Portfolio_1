@@ -4,16 +4,9 @@
 
 <main>
 <div class="container">
-    <svg class="Path1">
-        <path id="path1"
-            d="M 50 50 L 50 100"
-            stroke="black" stroke-width="1" fill="black"/>
-            <path 
-            d="M 50 100 L 350 100"
-            stroke="black" stroke-width="1" fill="black"/>
-        </svg>
-        <img class="img" src="" alt="">
+    <div class="Anim">
         <h1 class="Name">About me</h1>
+    </div>
     <div class="part_one">
             <h1>Education</h1>
         <ul>
@@ -41,11 +34,12 @@
 <style>
     @keyframes path1{
         0% {
-            d: path("M 50 50 L 50 650");
+            height: 415px;
         }
         100% {
-            d: path("M 50 50 L 50 100")
+            height: 55px;
         }
+    }
     }
     #path1{
         animation: path1 2s;
@@ -54,9 +48,19 @@
         height: 457px;
     }
     .Name{
-    position: absolute;
-    top: 6%;
-    left: 4.5%;
+    border-bottom: 2px solid black;
+    margin:0px;
+    padding: 5px;
+    }
+    .Anim{
+        animation: path1 1s;
+        position: absolute;
+        left: 4.5%;
+        top: 6%;
+        height: 55px;
+        width: 200px;
+        border-left: 2px solid black;
+        padding:0;
     }
     .part_one {
     position:absolute;
