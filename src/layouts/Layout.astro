@@ -47,6 +47,20 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@font-face {
+		font-family: MPLUS1p-Bold;
+		src: url(../fonts/M_PLUS_1p/MPLUS1p-Bold.ttf);
+	}
+	@font-face {
+		font-family: Montserrat;
+		src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: MPLUS1p-Bold;
+	}
+	a, p, textarea, input[type=text], button, label {
+		font-family: Montserrat;
+	}
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;

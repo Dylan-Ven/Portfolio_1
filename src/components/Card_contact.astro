@@ -1,7 +1,8 @@
 ---
 
 ---
-
+<script src="../modules/mail.mjs" />
+<script src="../modules/copyToClipboard.js" />
 <main>
     <div class="contact block" id="block4">
         
@@ -10,7 +11,7 @@
         <a href="https://github.com/Dylan-Ven">
             <article class="H100 W500 ArtGrid Art1">
                 <p class="absolute LeftSmall smaller">GitHub Profile</p>
-                <div id="Text1">
+                <div class="Text1">
                     <h3 class="Head">Dylan-Ven</h3>
                     <p>View Dylan-Ven's profile now!</p>
                 </div>
@@ -20,20 +21,26 @@
         <a href="https://www.linkedin.com/in/dylan-van-der-ven-766a94240/">
             <article class="H100 W500 ArtGrid Art2">
                 
-                <div id="Text1">
+                <div class="Text1">
                     <p class="absolute card2 smaller">LinkedIn Profile</p>
                     <h3 class="Head">Dylan van der Ven</h3>
                     <p>View Dylan's profile now!</p>
                 </div>
-                <img class="size" id="IMG" src="https://media.licdn.com/dms/image/D4E03AQEqwycHRAI75A/profile-displayphoto-shrink_200_200/0/1685693979606?e=1715817600&v=beta&t=Rq2RyGC-vTLaZXuSjQdeFUEDkGvXNR8z0BgBgfjCHCM" alt="photo">
+                <img class="size" id="IMG" src="https://media.licdn.com/dms/image/D4E03AQGTW8kOkkTC3Q/profile-displayphoto-shrink_200_200/0/1711094242742?e=1717027200&v=beta&t=3MyP4QQ0SPL_D0QngWJJRWqcgw-a9zq6ool0P2m0Wp4" alt="photo">
                 </article>
-        </a>    
+        </a>
+        <button class="hidden pos" id="copy">Contact me by phone!</button>
         <svg class="divider">
             <path 
             d="M 0 0 L 0 820"
             stroke="black" stroke-width="1" fill="black"/>
         </svg>
-        <div class="mailer"></div>
+        <!-- <div class="mailer">
+            <input type="email" id="Mail" placeholder="Email" class="H40 W900">
+            <input type="text" id="Subject" placeholder="Subject" class="H40 W900">
+            <textarea name="Text" id="Text" class="H180 W900" placeholder="Type your message here..."></textarea>
+            <button id="send">Send Mail</button>
+        </div> -->
 </main>
 
 <style>
@@ -94,7 +101,7 @@
         width: 85px;
         height: 85px;
     }
-    #Text1{
+    .Text1{
         grid-area: Text;
     }
     .toBackground{
@@ -119,5 +126,36 @@
     .smaller{
         font-size: 10px;
     }
-
+    .hidden{
+        border:0;
+        background: none;
+        color: #777777;
+    }
+    .hidden:hover{
+        border-bottom: 1px solid #777777;
+        cursor: pointer;
+    }
+    .pos{
+        position: absolute;
+        top: 13.5%;
+        left: 4.5%;
+    }
+    .H40{
+        height: 40px;
+    }
+    .H180{
+        height: 180px;
+    }
+    .W100{
+        width: 100%;
+    }
+    .mailer{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: absolute;
+        top: 20%;
+        right: 2%;
+        width: 47.5%;
+    }
 </style>
