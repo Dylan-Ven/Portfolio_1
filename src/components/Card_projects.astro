@@ -27,9 +27,19 @@
     <h1 class="Name w250">Projects</h1>
 
     <div class="info hidden" id="P1">
-        <h3></h3>
-        <a href=""><button>show code</button></a>
-        <p></p>
+        <h3 class="em3">Portfolio</h3>
+        <a  class="RR HL"href="https://github.com/Dylan-Ven/Portfolio_1">show code</a>
+        <p>This is my current portfolio, I am very proud of this project,
+            I have learnt and used the Astro Framework for this project. <br><br>
+            It is, as of right now, not optimised to be viewed on mobile devices, but I am working on it. <br><br>
+        </p>
+        <h3>Languages Used:</h3>
+        <ul>
+            <li>Astro</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>TypeScript / JavaScript</li>
+        </ul>
     </div>
         <div class="info hidden" id="P2">
         <h3></h3>
@@ -59,10 +69,10 @@
 
 
     <div class="selector">
-        <!-- <button onclick="toggleVisibility('P1')" class="Bbottom">
-            <p>Projectname</p>
+        <button onclick="toggleVisibility('P1')" class="Bbottom">
+            <p>Portfolio-1</p>
         </button>
-        <button onclick="toggleVisibility('P2')" class="Bbottom">
+         <!-- <button onclick="toggleVisibility('P2')" class="Bbottom">
             <p>Projectname</p>
         </button>
         <button onclick="toggleVisibility('P3')" class="Bbottom">
@@ -76,12 +86,20 @@
         </button>
         <button onclick="toggleVisibility('P6')" class="Bbottom">
             <p>Projectname</p>
-        </button> -->
-        <p>no projects to show.</p>
+        </button> 
+        <p>no projects to show.</p>-->
     </div>
 </main>
 
 <style>
+    .em3{
+        font-size: 3em;
+    }
+    .RR{
+        position: relative;
+        Left: 85%;
+    }
+
     .hidden{
         display: none;
     }
@@ -124,7 +142,6 @@
         position: absolute;
         top: 14%;
         left: 3%;
-        border: 1px solid grey;
         border-radius: 25px;
     }
 
@@ -134,5 +151,12 @@
 
     .Bbottom{
         border-bottom: 1px solid grey;
+    }
+    .HL{
+        height: 15px;
+        width: 25px;
+    }
+    .HL:hover{
+        background: #f1f2dc;
     }
 </style>
