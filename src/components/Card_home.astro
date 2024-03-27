@@ -5,6 +5,9 @@
 <main>
     <h1 class="Name">Dylan van der Ven</h1>
     <button class="hidden bottom" id="button">Show Breaking bad quote</button>
+
+    <h2 class="Size PC">I am a <span class="color">Webdeveloper</span></h2>
+    <p class="em2 PC2">With a <span class="color">passion</span> for <span class="color">api / app Security</span> and <span class="color">Frontend</span></p>
 </main>
 
 <script>
@@ -24,6 +27,44 @@
     
 </script>
 <style>
+    @keyframes coolor{
+        0%{
+            color: red
+        }
+        40%{
+            color: green;
+        }
+        80%{
+            color: blue;
+        }
+        100%{
+            color: red;
+        }
+        
+    }
+    .em2{
+        font-size: 3em;
+        width: 75vw;
+    }
+    .color{
+        animation: coolor 7s infinite;
+    }
+    .Size{
+        font-size: 8em;
+        width: 75vw;
+    }
+    .PC2{
+        position: absolute;
+        top: 53%;
+        left: 56%;
+        transform: translate(-50%, -50%);
+    }
+    .PC{
+        position: absolute;
+        top: 35%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+    }
 .Name{
     position: absolute;
     top: 6%;
