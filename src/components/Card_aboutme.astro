@@ -68,8 +68,8 @@ const props = Astro.props
                         <p class="SkillText">Photoshop</p>
                     </div>
             </div>
-            <div class="IMAGEl PIB one">
-                <img class="IMAGEl one" src="/img/Dylan2.JPG" alt="me">
+            <div class="IMAGEl PIB">
+                <img class="IMAGEl" src="/img/Dylan2.JPG" alt="me">
             </div>
         </div>
 </main>
@@ -84,9 +84,11 @@ const props = Astro.props
         }
     }
     .IMAGEl{
-        width: 500px;
+        width: 50%;
         position: absolute;
         border-radius: 5%;
+        bottom:7%;
+        right:0%;
     }
     .skill > img{
         width: fit-content;
@@ -96,6 +98,7 @@ const props = Astro.props
         position: absolute;
         top: 20%;
         right: 10%;
+        
     }
     #path1{
         animation: path1 2s;
